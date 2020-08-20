@@ -7,6 +7,14 @@ import kr.co.tjoeun.pizzaorder_20200820.fragments.MyProfileFragment
 import kr.co.tjoeun.pizzaorder_20200820.fragments.PizzaStoreFragment
 
 class MainViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when(position){
+            0 -> "피자주문"
+            1 -> "내 정보 설정"
+        }
+    }
+
     override fun getItem(position: Int): Fragment {
         return when(position){
             0 -> PizzaStoreFragment()
