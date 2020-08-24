@@ -18,6 +18,7 @@
 
 
         <TextView
+            android:id="@+id/myNickNameTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LYC"/>
@@ -28,6 +29,7 @@
             android:layout_weight="1"/>
 
         <Button
+            android:id="@+id/changeNicknameBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="닉네임변경"/>
