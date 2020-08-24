@@ -13,6 +13,9 @@ import kr.co.tjoeun.pizzaorder_20200820.R
 
 class MyProfileFragment : Fragment(){
 
+    val REQ_FOR_NICKNAME = 1000
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,6 +32,7 @@ class MyProfileFragment : Fragment(){
         changeNicknameBtn.setOnClickListener {
 
             val myIntent = Intent(context!!, EditNicknameActivity::class.java)
+            startActivityForResult(myIntent, REQ_FOR_NICKNAME)
         }
         
 
