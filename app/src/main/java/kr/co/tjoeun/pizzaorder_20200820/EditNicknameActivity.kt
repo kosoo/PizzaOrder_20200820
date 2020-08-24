@@ -22,12 +22,15 @@ class EditNicknameActivity : BaseActivity() {
 
             if (inputNickname.length<5){
                 Toast.makeText(mContext, "닉네임은 5자 이상이어야 합니다.", Toast.LENGTH_SHORT).show()
-            } else {
-                val resultIntent = Intent()
-                resultIntent.putExtra("nick", inputNickname)
-                setResult(Activity.RESULT_OK, resultIntent)
-                finish()
+//                밑의 resultIntent 코드를 실행하지 못하도록
+//                ok 클릭 이벤트를 강제 종료
+                return@setOnClickListener
             }
+
+            val resultIntent = Intent()
+            resultIntent.putExtra("nick", inputNickname)
+            setResult(Activity.RESULT_OK, resultIntent)
+            finish()
 
         }
     }
